@@ -7,11 +7,11 @@ import {
   greeting,
   workExperiences,
   skillsSection,
-  openSource,
-  blogSection,
-  talkSection,
-  achievementSection,
-  resumeSection,
+  openSource, // eslint-disable-line no-unused-vars
+  blogSection, // eslint-disable-line no-unused-vars
+  talkSection, // eslint-disable-line no-unused-vars
+  achievementSection, // eslint-disable-line no-unused-vars
+  resumeSection, // eslint-disable-line no-unused-vars
   educationInfo,
   bigProjects
 } from "../../portfolio";
