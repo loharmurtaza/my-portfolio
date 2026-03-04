@@ -39,36 +39,49 @@ export default function Projects() {
   function setrepoFunction(array) {
     setrepo(array);
   }
-  if (
-    !(typeof repo === "string" || repo instanceof String) &&
-    openSource.display
-  ) {
-    return (
-      <Suspense fallback={renderLoader()}>
-        <div className="main" id="opensource">
-          <h1 className="project-title">Open Source Projects</h1>
-          <div className="repo-cards-div-main">
-            {repo.map((v, i) => {
-              if (!v) {
-                console.error(
-                  `Github Object for repository number : ${i} is undefined`
-                );
-              }
-              return (
-                <GithubRepoCard repo={v} key={v.node.id} isDark={isDark} />
-              );
-            })}
-          </div>
-          <Button
-            text={"More Projects"}
-            className="project-button"
-            href={socialMediaLinks.github}
-            newTab={true}
-          />
-        </div>
-      </Suspense>
-    );
-  } else {
+  if (!openSource.display) {
     return <FailedLoading />;
   }
+
+  const isError = typeof repo === "string" || repo instanceof String;
+  const isLoading = !isError && repo.length === 0;
+
+  return (
+    <Suspense fallback={renderLoader()}>
+      <div className="main" id="opensource">
+        <h1 className="project-title">Open Source Projects</h1>
+        {isError ? (
+          <p className="project-load-error">
+            Projects could not be loaded. Add a <code>profile.json</code> in the{" "}
+            <code>public</code> folder (e.g. from GitHub GraphQL API) to show
+            pinned repositories here.
+          </p>
+        ) : isLoading ? (
+          renderLoader()
+        ) : (
+          <>
+            <div className="repo-cards-div-main">
+              {repo.map((v, i) => {
+                if (!v) {
+                  console.error(
+                    `Github Object for repository number : ${i} is undefined`
+                  );
+                  return null;
+                }
+                return (
+                  <GithubRepoCard repo={v} key={v.node.id} isDark={isDark} />
+                );
+              })}
+            </div>
+            <Button
+              text={"More Projects"}
+              className="project-button"
+              href={socialMediaLinks.github}
+              newTab={true}
+            />
+          </>
+        )}
+      </div>
+    </Suspense>
+  );
 }

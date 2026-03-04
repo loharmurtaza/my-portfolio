@@ -13,11 +13,10 @@
 .splash-title-container {
   font-size: 2.5rem;
   text-decoration: none;
+  font-family: "Fira Code", "JetBrains Mono", "SF Mono", Consolas, monospace;
 }
 .splash-title {
-  font-family: "Agustina Regular", cursive;
-  font-weight: bold;
-  font-variant-ligatures: no-common-ligatures;
-  -webkit-font-variant-ligatures: no-common-ligatures;
+  font-family: "Fira Code", "JetBrains Mono", "SF Mono", Consolas, monospace;
+  font-weight: 600;
   padding: 0 20px;
 }

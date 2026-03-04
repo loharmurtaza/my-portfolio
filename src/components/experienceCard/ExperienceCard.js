@@ -22,7 +22,8 @@ export default function ExperienceCard({cardInfo, isDark}) {
 
   const bullets = cardInfo.descBullets || [];
   const hasMore = bullets.length > BULLETS_LIMIT;
-  const visibleBullets = expanded ? bullets : bullets.slice(0, BULLETS_LIMIT);
+  const initialBullets = bullets.slice(0, BULLETS_LIMIT);
+  const extraBullets = bullets.slice(BULLETS_LIMIT);
 
   return (
     <div className={isDark ? "experience-card-dark" : "experience-card"}>
@@ -70,33 +71,46 @@ export default function ExperienceCard({cardInfo, isDark}) {
           {cardInfo.desc}
         </p>
         <ul>
-          {visibleBullets.map((item, i) => {
-            const isLast = i === visibleBullets.length - 1;
-            return (
-              <li
-                key={i}
-                className={isDark ? "subTitle dark-mode-text" : "subTitle"}
-              >
-                {item}
-                {isLast && hasMore && !expanded && (
-                  <button
-                    className="experience-show-more"
-                    onClick={() => setExpanded(true)}
-                  >
-                    ...more
-                  </button>
-                )}
-              </li>
-            );
-          })}
+          {initialBullets.map((item, i) => (
+            <li
+              key={i}
+              className={isDark ? "subTitle dark-mode-text" : "subTitle"}
+            >
+              {item}
+              {i === initialBullets.length - 1 && hasMore && !expanded && (
+                <button
+                  className="experience-show-more"
+                  onClick={() => setExpanded(true)}
+                >
+                  ...Show more
+                </button>
+              )}
+            </li>
+          ))}
         </ul>
-        {expanded && hasMore && (
-          <button
-            className="experience-show-more experience-show-less"
-            onClick={() => setExpanded(false)}
+        {hasMore && (
+          <div
+            className={`experience-bullets-extra ${expanded ? "expanded" : ""}`}
           >
-            Show less
-          </button>
+            <div className="experience-bullets-extra-inner">
+              <ul className="experience-bullets-extra-list">
+                {extraBullets.map((item, i) => (
+                  <li
+                    key={i}
+                    className={isDark ? "subTitle dark-mode-text" : "subTitle"}
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <button
+                className="experience-show-more experience-show-less"
+                onClick={() => setExpanded(false)}
+              >
+                Show less
+              </button>
+            </div>
+          </div>
         )}
       </div>
     </div>

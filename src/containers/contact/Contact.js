@@ -4,6 +4,7 @@ import SocialMedia from "../../components/socialMedia/SocialMedia";
 import {illustration, contactInfo} from "../../portfolio";
 import {Fade} from "react-reveal";
 import email from "../../assets/lottie/email";
+import contactMailDarkSvg from "../../assets/images/contactMailDark.svg";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
 
@@ -58,7 +59,7 @@ export default function Contact() {
             ) : (
               <img
                 alt="Man working"
-                src={require("../../assets/images/contactMailDark.svg")}
+                src={typeof contactMailDarkSvg === "string" ? contactMailDarkSvg : contactMailDarkSvg?.default}
               ></img>
             )}
           </div>

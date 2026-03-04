@@ -4,7 +4,8 @@ import Greeting from "./greeting/Greeting";
 import Skills from "./skills/Skills";
 import StackProgress from "./skillProgress/skillProgress"; // eslint-disable-line no-unused-vars
 import WorkExperience from "./workExperience/WorkExperience";
-import Projects from "./projects/Projects";
+import Projects from "./projects/Projects"; // eslint-disable-line no-unused-vars
+import Publications from "./Publications/Publications";
 import StartupProject from "./StartupProjects/StartupProject";
 import Achievement from "./achievement/Achievement"; // eslint-disable-line no-unused-vars
 import Blogs from "./blogs/Blogs"; // eslint-disable-line no-unused-vars
@@ -55,10 +56,11 @@ const Main = () => {
             <Skills />
             {/* <StackProgress /> */}
             <WorkExperience />
-            <Education />
-            <Projects />
             <StartupProject />
-            {/* <Achievement /> */}
+            <Education />
+            {/* <Projects /> */}
+            <Publications />
+            <Achievement />
             {/* <Blogs /> */}
             {/* <Talks /> */}
             {/* <Twitter /> */}

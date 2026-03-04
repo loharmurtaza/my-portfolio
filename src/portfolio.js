@@ -16,7 +16,7 @@ const splashScreen = {
 
 // Summary And Greeting Section
 const illustration = {
-  animated: true // Set to false to use static SVG
+  animated: false // Set to false to use static SVG
 };
 
 const greeting = {
@@ -205,7 +205,7 @@ const openSource = {
 // Some big projects you have worked on
 const bigProjects = {
   title: "Projects",
-  subtitle: "SOME OF PROJECTS THAT I HAVE WORKED ON",
+  subtitle: "SOME COOL STUFF THAT I HAVE WORKED ON",
   projects: [
     {
       // image: require("./assets/images/saayaHealthLogo.webp"),
@@ -244,6 +244,18 @@ const bigProjects = {
     },
     {
       // image: require("./assets/images/saayaHealthLogo.webp"),
+      projectName: "RETINAL VESSEL SEGMENTATION",
+      projectDesc: "This project explores and compares deep learning models for segmenting retinal blood vessels in fundus images using the DRIVE dataset. The goal is to improve diagnostic assistance in detecting retinal diseases such as diabetic retinopathy and hypertension.",
+      footerLink: [
+        {
+          name: "Github Repository",
+          url: "https://github.com/GetomG/Retinal-Vessel-Segmentation-Using-Deep-Learning-Techniques"
+        }
+        //you can add extra buttons here.
+      ]
+    },
+    {
+      // image: require("./assets/images/saayaHealthLogo.webp"),
       projectName: "GRAPHENE PERCOLATION SIMULATION",
       projectDesc: "A scientific simulation tool for modeling the growth and percolation of graphene on a substrate surface. The project fits experimental surface coverage data to logistic or exponential growth models, simulates radial flake growth, and detects percolation using graph-based connectivity analysis.",
       footerLink: [
@@ -259,62 +271,98 @@ const bigProjects = {
 };
 
 
+// Publications Section (same card style as Projects)
+const publicationsSection = {
+  title: "Publications",
+  subtitle: "SOME COOL STUFF THAT I HAVE PUBLISHED",
+  publications: [
+    {
+      projectName: "Multi-Modal Feature Set-Based Detection of Freezing of Gait in Parkinson's Disease Using SVM",
+      projectDesc:
+        "In this work, we explored a multi-modal approach using Electroencephalogram (EEG), Electromyography (EMG), tri-axial ACC (accelerometers and gyroscopes), and Skin Conductance (SC) data to improve the detection of Freezing of Gait (FoG)—a debilitating motor symptom in Parkinson’s disease. Our SVM-based model demonstrates promising performance and contributes to the development of more effective AI-driven assistive technologies.",
+      footerLink: [
+        { name: "Paper", url: "https://ieeexplore.ieee.org/document/11062848" },
+        // { name: "Github Repository", url: "https://github.com/example" }
+      ]
+    },
+    {
+      projectName: "Graphene Autocatalytic Growth with Percolation Control on a Dielectric Substrate",
+      projectDesc:
+        "Co-authored research on graphene growth mechanisms, demonstrating autocatalytic formation driven by the Boudouard reaction and governed by percolation dynamics. The work provides insights into scalable graphene synthesis on dielectric substrates for advanced electronic and energy applications.",
+      footerLink: [
+        { name: "Paper", url: "https://www.sciencedirect.com/science/article/pii/S2590123026008704" },
+        { name: "Github Repository", url: "https://github.com/loharmurtaza/simulating-graphene-percolation" }
+      ]
+    },
+    // {
+    //   projectName: "Publication title",
+    //   projectDesc:
+    //     "Brief description of the publication, venue, and key contributions. You can add links to paper, code, or dataset below.",
+    //   footerLink: [
+    //     { name: "Paper", url: "https://example.com/paper" },
+    //     { name: "Github Repository", url: "https://github.com/example" }
+    //   ]
+    // },
+  ],
+  display: true
+};
+
+
 // Achievement Section
 // Include certificates, talks etc
 const achievementSection = {
-  title: emoji("Achievements And Certifications 🏆 "),
+  title: emoji("Achievements And Certifications"),
   subtitle:
-    "Achievements, Certifications, Award Letters and Some Cool Stuff that I have done !",
+    "SOME COOL STUFF THAT I HAVE RECEIVED",
 
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
+      title: "IBM DevOps, Cloud, and Agile Foundations",
       subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
+        "Completed the IBM DevOps, Cloud, and Agile Foundations specialization on Coursera.",
+      image: require("./assets/images/ibmLogo.png"),
+      imageAlt: "IBM Logo",
       footerLink: [
         {
           name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
+          url: "https://www.coursera.org/account/accomplishments/specialization/certificate/QXQ7TH8I0AJL"
         },
-        {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-        },
-        {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
-        }
+        // {
+        //   name: "Award Letter",
+        //   url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
+        // },
+        // {
+        //   name: "Google Code-in Blog",
+        //   url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
+        // }
       ]
     },
-    {
-      title: "Google Assistant Action",
-      subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
-      footerLink: [
-        {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-        }
-      ]
-    },
-
-    {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
-      footerLink: [
-        {name: "Certification", url: ""},
-        {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
-        }
-      ]
-    }
+    // {
+    //   title: "Google Assistant Action",
+    //   subtitle:
+    //     "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
+    //   image: require("./assets/images/googleAssistantLogo.webp"),
+    //   imageAlt: "Google Assistant Action Logo",
+    //   footerLink: [
+    //     {
+    //       name: "View Google Assistant Action",
+    //       url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
+    //     }
+    //   ]
+    // },
+    // {
+    //   title: "PWA Web App Developer",
+    //   subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
+    //   image: require("./assets/images/pwaLogo.webp"),
+    //   imageAlt: "PWA Logo",
+    //   footerLink: [
+    //     {name: "Certification", url: ""},
+    //     {
+    //       name: "Final Project",
+    //       url: "https://pakistan-olx-1.firebaseapp.com/"
+    //     }
+    //   ]
+    // }
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -385,7 +433,7 @@ const resumeSection = {
 };
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
+  title: emoji("Contact Me"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
   number: "+92-3173447972",
@@ -412,6 +460,7 @@ export {
   workExperiences,
   openSource,
   bigProjects,
+  publicationsSection,
   achievementSection,
   blogSection,
   talkSection,

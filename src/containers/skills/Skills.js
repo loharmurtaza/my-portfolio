@@ -4,6 +4,7 @@ import SoftwareSkill from "../../components/softwareSkills/SoftwareSkill";
 import {illustration, skillsSection} from "../../portfolio";
 import {Fade} from "react-reveal";
 import codingPerson from "../../assets/lottie/codingPerson";
+import developerActivitySvg from "../../assets/images/developerActivity.svg";
 import DisplayLottie from "../../components/displayLottie/DisplayLottie";
 import StyleContext from "../../contexts/StyleContext";
 
@@ -22,7 +23,7 @@ export default function Skills() {
             ) : (
               <img
                 alt="Man Working"
-                src={require("../../assets/images/developerActivity.svg")}
+                src={typeof developerActivitySvg === "string" ? developerActivitySvg : developerActivitySvg?.default}
               ></img>
             )}
           </div>

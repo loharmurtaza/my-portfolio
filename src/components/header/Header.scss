@@ -58,13 +58,12 @@
   text-decoration: none;
   margin-top: 10px;
   line-height: normal;
+  font-family: "Fira Code", "JetBrains Mono", "SF Mono", Consolas, monospace;
 }
 
 .header .logo-name {
-  font-family: "Agustina Regular";
-  font-weight: bold;
-  font-variant-ligatures: no-common-ligatures;
-  -webkit-font-variant-ligatures: no-common-ligatures;
+  font-family: "Fira Code", "JetBrains Mono", "SF Mono", Consolas, monospace;
+  font-weight: 600;
   padding: 0 10px;
 }
 

@@ -37,30 +37,30 @@ export default function StartupProject() {
               return (
                 <div
                   key={i}
-                  className={
+                  className={`${
                     isDark
                       ? "dark-mode project-card project-card-dark"
                       : "project-card project-card-light"
-                  }
+                  }${project.image ? "" : " project-card-no-image"}`}
                 >
                   {project.image ? (
                     <div className="project-image">
                       <img
                         src={project.image}
                         alt={project.projectName}
-                        className="card-image"
+                        className="card-image-projects"
                       ></img>
                     </div>
                   ) : null}
                   <div className="project-detail">
                     <h5
-                      className={isDark ? "dark-mode card-title" : "card-title"}
+                      className={isDark ? "dark-mode card-title-projects" : "card-title-projects"}
                     >
                       {project.projectName}
                     </h5>
                     <p
                       className={
-                        isDark ? "dark-mode card-subtitle" : "card-subtitle"
+                        isDark ? "dark-mode card-subtitle-projects" : "card-subtitle-projects"
                       }
                     >
                       {project.projectDesc}
