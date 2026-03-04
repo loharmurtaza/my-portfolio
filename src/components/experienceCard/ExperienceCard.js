@@ -2,8 +2,11 @@ import React, {useState, createRef} from "react";
 import "./ExperienceCard.scss";
 import ColorThief from "colorthief";
 
+const BULLETS_LIMIT = 2;
+
 export default function ExperienceCard({cardInfo, isDark}) {
   const [colorArrays, setColorArrays] = useState([]);
+  const [expanded, setExpanded] = useState(false);
   const imgRef = createRef();
 
   function getColorArrays() {
@@ -17,18 +20,9 @@ export default function ExperienceCard({cardInfo, isDark}) {
       : "rgb(" + values.join(", ") + ")";
   }
 
-  const GetDescBullets = ({descBullets, isDark}) => {
-    return descBullets
-      ? descBullets.map((item, i) => (
-          <li
-            key={i}
-            className={isDark ? "subTitle dark-mode-text" : "subTitle"}
-          >
-            {item}
-          </li>
-        ))
-      : null;
-  };
+  const bullets = cardInfo.descBullets || [];
+  const hasMore = bullets.length > BULLETS_LIMIT;
+  const visibleBullets = expanded ? bullets : bullets.slice(0, BULLETS_LIMIT);
 
   return (
     <div className={isDark ? "experience-card-dark" : "experience-card"}>
@@ -76,8 +70,34 @@ export default function ExperienceCard({cardInfo, isDark}) {
           {cardInfo.desc}
         </p>
         <ul>
-          <GetDescBullets descBullets={cardInfo.descBullets} isDark={isDark} />
+          {visibleBullets.map((item, i) => {
+            const isLast = i === visibleBullets.length - 1;
+            return (
+              <li
+                key={i}
+                className={isDark ? "subTitle dark-mode-text" : "subTitle"}
+              >
+                {item}
+                {isLast && hasMore && !expanded && (
+                  <button
+                    className="experience-show-more"
+                    onClick={() => setExpanded(true)}
+                  >
+                    ...more
+                  </button>
+                )}
+              </li>
+            );
+          })}
         </ul>
+        {expanded && hasMore && (
+          <button
+            className="experience-show-more experience-show-less"
+            onClick={() => setExpanded(false)}
+          >
+            Show less
+          </button>
+        )}
       </div>
     </div>
   );

@@ -25,8 +25,8 @@ const greeting = {
   subTitle: emoji(
     "A passionate Python Developer and AI Engineer having an experience of building applications with Python / Django / Flask / Langchain and some other cool libraries and frameworks."
   ),
-  resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the RESUME button
+  // resumeLink:
+  //   "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the RESUME button
   displayGreeting: true // Set false to hide this section, defaults to true
 };
 
@@ -51,7 +51,7 @@ const socialMediaLinks = {
 // Skills Section
 const skillsSection = {
   title: "What I do",
-  subTitle: "A PYTHON DEVELOPER and AI ENGINEER who loves to work with backend systems and AI-powered applications.",
+  subTitle: `A <strong style="color:#333;font-weight:700;">PYTHON DEVELOPER</strong> and <strong style="color:#333;font-weight:700;">AI ENGINEER</strong> who loves to work with backend systems and AI-powered applications.`,
   skills: [
     emoji("⚡ Developing REST APIs using FastAPI and Django for backend systems for scalable service design"),
     emoji("⚡ Building Retrieval-Augmented Generation (RAG) pipelines for AI-powered applications"),
@@ -109,8 +109,8 @@ const educationInfo = {
     {
       schoolName: "Mehran University of Engineering and Technology",
       logo: require("./assets/images/mehranLogo.jpg"),
-      subHeader: "Bachelor of Science in Mechatronics Engineering",
-      duration: "September 2016 - January 2021",
+      subHeader: "Bachelor of Engineering in Mechatronics Engineering",
+      duration: "November 2016 - January 2021",
       desc: "Ranked 1st in the program and recieved Silver Medal. Took courses about Electronics, Control Systems, Machine Learning, ...",
       descBullets: [
         "Devised smart wristband for health monitoring of elderly people using IoT.",
@@ -150,32 +150,52 @@ const workExperiences = {
       company: "Quantilytics",
       companylogo: require("./assets/images/quantilyticsLogo.jfif"),
       date: "June 2025 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        "Developed and maintained scalable backend services using Python, Django, and Django REST Framework to support data-driven and AI-enabled applications.",
+        "Designed and implemented RESTful APIs for internal systems and third-party integrations, improving data accessibility and service interoperability.",
+        "Built AI-powered application components including a healthcare assistant leveraging Retrieval-Augmented Generation (RAG), LLM integrations, and real-time streaming responses.",
+        "Implemented knowledge retrieval workflows including document processing, embeddings generation, semantic search, and contextual response synthesis using vector databases (Qdrant).",
+        "Developed modular backend services using FastAPI with integrations to PostgreSQL, MongoDB, and Redis for caching, session memory, and performance optimization.",
+        "Worked with PostgreSQL, MongoDB, and vector databases (Qdrant) to support structured data storage and semantic search use cases.",
+        "Optimized application performance through query tuning, Redis caching, and asynchronous task processing, improving response times and system reliability.",
+        "Contributed to deployment and infrastructure workflows using Docker and cloud platforms (Google Cloud / DigitalOcean), supporting scalable production environments.",
+        "Maintained CI/CD pipelines to automate testing and deployment processes, reducing release friction and improving development efficiency."
       ]
     },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Python Developer",
+      company: "i3 Pathfinder Solutions",
+      companylogo: require("./assets/images/pathfinderLogo.jpg"),
+      date: "July 2022 – Sep 2023",
+      descBullets: [
+        "Assisted in developing backend modules and REST APIs using Python and Django under senior developer guidance, contributing to client-facing platforms and internal tools.",
+        "Implemented business logic, database models, and API endpoints using Django REST Framework to support application functionality.",
+        "Performed database design, migrations, and optimization using PostgreSQL and MongoDB.",
+        "Integrated third-party services and external APIs, enabling automated workflows and system connectivity.",
+        "Refactored legacy code and resolved defects to improve application stability, maintainability, and performance.",
+        "Developed reusable utilities and automation scripts to streamline development and data processing tasks.",
+        "Supported deployment activities, environment configuration, and version control workflows using Git.",
+        "Created technical documentation and participated in testing and user acceptance processes for delivered features.",
+      ]
     },
     {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      role: "Mentorship Trainee",
+      company: "Pakistan State Oil Company",
+      companylogo: require("./assets/images/psoLogo.png"),
+      date: "Sep 2021 – July 2022",
+      descBullets: [
+        "Retrieved and analyzed operational data from SQL Server using Python to generate business insights and reporting outputs.",
+        "Performed data preprocessing, feature engineering, and exploratory analysis to support predictive modeling initiatives.",
+        "Built and evaluated classical machine learning models for sales trend analysis and forecasting.",
+        "Optimized database queries and schemas to improve performance for analytics workloads.",
+      ]
     }
   ]
 };
 
+
 /* Your Open Source Section to View Your Github Pinned Projects
 To know how to get github key look at readme.md */
-
 const openSource = {
   showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
   display: true // Set false to hide this section, defaults to true
@@ -184,32 +204,56 @@ const openSource = {
 
 // Some big projects you have worked on
 const bigProjects = {
-  title: "Big Projects",
-  subtitle: "SOME STARTUPS AND COMPANIES THAT I HELPED TO CREATE THEIR TECH",
+  title: "Projects",
+  subtitle: "SOME OF PROJECTS THAT I HAVE WORKED ON",
   projects: [
     {
-      image: require("./assets/images/saayaHealthLogo.webp"),
-      projectName: "Saayahealth",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      // image: require("./assets/images/saayaHealthLogo.webp"),
+      projectName: "AI-POWERED PATIENT CHATBOT",
+      projectDesc: "Built an AI healthcare chatbot using LLMs with RAG, enabling real-time, context-aware responses through semantic search, conversation memory, and safety guardrails. Developed scalable FastAPI-based backend services integrating databases and tools for doctor search, appointment booking, and symptom intake.",
+      // footerLink: [
+      //   {
+      //     name: "Visit Website",
+      //     url: "http://saayahealth.com/"
+      //   }
+      //   //  you can add extra buttons here.
+      // ]
+    },
+    {
+      // image: require("./assets/images/nextuLogo.webp"),
+      projectName: "LAWFULLY",
+      projectDesc: "Built a legal consultation platform using Django and DRF, enabling clients to book and manage appointments with lawyers through secure, role-based REST APIs. Implemented scheduling logic, performance optimizations, and notification services to ensure reliable and efficient consultations.",
+      // footerLink: [
+      //   {
+      //     name: "Visit Website",
+      //     url: "http://nextu.se/"
+      //   }
+      // ]
+    },
+    {
+      // image: require("./assets/images/saayaHealthLogo.webp"),
+      projectName: "DIABETIC RETINOPATHY CLASSIFICATION",
+      projectDesc: "Built a deep learning pipeline for diabetic retinopathy classification using CNNs and Vision Transformers (MedViT, Swin, EfficientNet), with advanced preprocessing, augmentation, and model evaluation. Deployed a Flask-based inference app with image upload, severity prediction, and attention-map visualizations for interpretability.",
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://saayahealth.com/"
+          name: "Github Repository",
+          url: "https://github.com/katerina2901/Diabetic-retinopathy-classification"
         }
         //  you can add extra buttons here.
       ]
     },
     {
-      image: require("./assets/images/nextuLogo.webp"),
-      projectName: "Nextu",
-      projectDesc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      // image: require("./assets/images/saayaHealthLogo.webp"),
+      projectName: "GRAPHENE PERCOLATION SIMULATION",
+      projectDesc: "A scientific simulation tool for modeling the growth and percolation of graphene on a substrate surface. The project fits experimental surface coverage data to logistic or exponential growth models, simulates radial flake growth, and detects percolation using graph-based connectivity analysis.",
       footerLink: [
         {
-          name: "Visit Website",
-          url: "http://nextu.se/"
+          name: "Github Repository",
+          url: "https://github.com/loharmurtaza/simulating-graphene-percolation"
         }
+        //  you can add extra buttons here.
       ]
-    }
+    },
   ],
   display: true // Set false to hide this section, defaults to true
 };
@@ -344,8 +388,8 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+  number: "+92-3173447972",
+  email_address: "loharmurtaza788@gmail.com"
 };
 
 

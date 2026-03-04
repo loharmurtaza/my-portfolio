@@ -121,6 +121,26 @@
   margin-top: 2rem;
 }
 
+.experience-show-more {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: $buttonColor;
+  padding: 0 0 0 4px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.experience-show-less {
+  display: block;
+  padding: 0;
+  margin-top: 0.25rem;
+}
+
 /* Media Query */
 
 @media (max-width: 1380px) {

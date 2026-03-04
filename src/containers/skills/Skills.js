@@ -40,9 +40,8 @@ export default function Skills() {
                   ? "dark-mode subTitle skills-text-subtitle"
                   : "subTitle skills-text-subtitle"
               }
-            >
-              {skillsSection.subTitle}
-            </p>
+              dangerouslySetInnerHTML={{__html: skillsSection.subTitle}}
+            />
             <SoftwareSkill />
             <div>
               {skillsSection.skills.map((skills, i) => {
