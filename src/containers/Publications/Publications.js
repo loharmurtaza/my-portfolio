@@ -62,6 +62,7 @@ export default function Publications() {
                   >
                     {pub.projectName}
                   </h5>
+                  <hr className={isDark ? "dark-mode publication-card-divider" : "publication-card-divider"} />
                   <p
                     className={
                       isDark

@@ -14,6 +14,9 @@
 
 .education-section > * {
   flex: 1;
+}
+
+.education-section > .education-heading {
   margin-bottom: 30px;
 }
 
@@ -21,6 +24,10 @@
   display: flex;
   flex-direction: column;
   padding-top: 20px;
+}
+
+.education-card-container > div:last-child .education-card-border {
+  display: none;
 }
 
 @media (max-width: 1380px) {

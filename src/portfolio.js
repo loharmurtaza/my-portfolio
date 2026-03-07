@@ -96,7 +96,7 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Skolkovo Institute of Science and Technology",
+      schoolName: "Skolkovo Institute of Science and Technology, Russia",
       logo: require("./assets/images/skoltechLogo.jpg"),
       subHeader: "Master of Science in Internet of Things & Wireless Technologies",
       duration: "September 2023 - June 2025",
@@ -107,7 +107,7 @@ const educationInfo = {
       ]
     },
     {
-      schoolName: "Mehran University of Engineering and Technology",
+      schoolName: "Mehran University of Engineering and Technology, Pakistan",
       logo: require("./assets/images/mehranLogo.jpg"),
       subHeader: "Bachelor of Engineering in Mechatronics Engineering",
       duration: "November 2016 - January 2021",
@@ -277,7 +277,7 @@ const publicationsSection = {
   subtitle: "SOME COOL STUFF THAT I HAVE PUBLISHED",
   publications: [
     {
-      projectName: "Multi-Modal Feature Set-Based Detection of Freezing of Gait in Parkinson's Disease Using SVM",
+      projectName: "MULTI-MODAL FEATURE SET-BASED DETECTION OF FREEZING OF GAIT IN PARKINSON'S DISEASE USING SVM",
       projectDesc:
         "In this work, we explored a multi-modal approach using Electroencephalogram (EEG), Electromyography (EMG), tri-axial ACC (accelerometers and gyroscopes), and Skin Conductance (SC) data to improve the detection of Freezing of Gait (FoG)—a debilitating motor symptom in Parkinson’s disease. Our SVM-based model demonstrates promising performance and contributes to the development of more effective AI-driven assistive technologies.",
       footerLink: [
@@ -286,9 +286,9 @@ const publicationsSection = {
       ]
     },
     {
-      projectName: "Graphene Autocatalytic Growth with Percolation Control on a Dielectric Substrate",
+      projectName: "GRAPHENE AUTOCATALYTIC GROWTH WITH PERCOLATION CONTROL ON A DIELECTRIC SUBSTRATE",
       projectDesc:
-        "Co-authored research on graphene growth mechanisms, demonstrating autocatalytic formation driven by the Boudouard reaction and governed by percolation dynamics. The work provides insights into scalable graphene synthesis on dielectric substrates for advanced electronic and energy applications.",
+        "Research on graphene growth mechanisms, demonstrating autocatalytic formation driven by the Boudouard reaction and governed by percolation dynamics. The work provides insights into scalable graphene synthesis on dielectric substrates for advanced electronic and energy applications.",
       footerLink: [
         { name: "Paper", url: "https://www.sciencedirect.com/science/article/pii/S2590123026008704" },
         { name: "Github Repository", url: "https://github.com/loharmurtaza/simulating-graphene-percolation" }

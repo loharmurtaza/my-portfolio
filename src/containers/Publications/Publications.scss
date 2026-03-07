@@ -16,6 +16,15 @@
   padding: 0;
 }
 
+.publication-card-divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid $lightBorder1;
+  margin: 0.5rem 0;
+}
+.dark-mode.publication-card-divider {
+  border-top-color: rgba(255, 255, 255, 0.15);
+}
 .card-subtitle-publications {
   color: $cardSubtitle;
   font-size: 17px;
